@@ -1,6 +1,6 @@
 "use client"
 
-import { deleteTodo, editTodo } from '@/api';
+import { deleteTodo, editTodoText } from '@/api';
 import { Todos } from '@/types'
 import { useRouter } from 'next/navigation';
 import React, { ChangeEvent, useEffect, useRef, useState } from 'react'
@@ -28,7 +28,7 @@ export const Todo = ( {todo}: TodoProps) => {
     setIsEditing(true);
   }
   const handleSave = async () => {
-    await editTodo(todo.id, newText);
+    await editTodoText(todo.id, newText);
     setIsEditing(false);
     router.refresh();
 
@@ -46,7 +46,7 @@ export const Todo = ( {todo}: TodoProps) => {
         <input
         ref = {ref}
         type="text"
-        className='mr-2 py-1 px-2 rounded border-gray-400 border'
+        className='mr-2 py-1 px-2 border-b-gray-400 border-b focus:outline-none'
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           setNewText(e.target.value)
         }

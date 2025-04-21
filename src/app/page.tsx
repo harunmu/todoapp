@@ -2,8 +2,7 @@
 // import AddTask from "./components/AddTask";
 // import TodoList from "./components/TodoList";
 import { getAllCategory, getAllTodos } from "@/api";
-import TodoCategory from "./components/TodoCategory";
-import { useState } from "react";
+import TodoPage from "./components/TodoPage";
 
 export default async function Home() {
   const todos = await getAllTodos();
@@ -13,7 +12,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-200">
       <h1 className="text-3xl mb-10 font-bold text-blue-400">Nextjs 13 Todo App</h1>
-      <TodoCategory todos={todos} categories={categories}/>
+      <TodoPage todos={todos} categories={categories}/>
       {/* <div className="flex">
         <TodoCategory />
         <div className="mr-5 ml-2">

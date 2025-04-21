@@ -45,7 +45,7 @@ export const addCategory = async (category: Categories): Promise<Categories> => 
     return newCategory;
 }
 
-export const editTodo = async (id: string, newText: string): Promise<Todos> => {
+export const editTodoText = async (id: string, newText: string): Promise<Todos> => {
     const res = await fetch(`http://localhost:3001/tasks/${id}`, {
         method: "PATCH",
         headers: {
@@ -53,9 +53,38 @@ export const editTodo = async (id: string, newText: string): Promise<Todos> => {
         },
         body: JSON.stringify({text: newText}),
     });
-    const updatedTodo = await res.json();
+    const updatedTodoText = await res.json();
 
-    return updatedTodo;
+    return updatedTodoText;
+}
+
+export const editTodoCategory = async (id:string, newText: string): Promise<Todos> => {
+
+    const res = await fetch(`http://localhost:3001/tasks/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({category: newText}),
+        });
+
+    const updatedTodoCategory = await res.json();
+    
+    return updatedTodoCategory;
+
+}
+
+export const editCategory = async (id: string, newText:string) => {
+    const res = await fetch(`http://localhost:3001/category/${id}`,{
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({text:newText}),
+    });
+    const updateCategory = await res.json();
+
+    return updateCategory
 }
 
 export const deleteTodo = async (id: string) => {
@@ -64,8 +93,9 @@ export const deleteTodo = async (id: string) => {
     })
 }
 
+
 export const deleteCategory = async (id: string) => {
-    const res = await fetch(`http://localhost:3001/tasks/${id}`,{
+    const res = await fetch(`http://localhost:3001/category/${id}`,{
         method: "DELETE",
     })
 }

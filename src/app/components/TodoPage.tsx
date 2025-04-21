@@ -9,19 +9,12 @@ import Category from './Category';
 import AddCategory from './AddCategory';
 // import { getAllCategory } from '@/api';
 
-interface TodoCategoryProps {
+interface TodoPageProps {
     todos: Todos[];
     categories: Categories[]
 }
 
-const TodoCategory = ({todos,categories}: TodoCategoryProps) => {
-
-    // const categories: categoryProps = getAllCategory();
-    
-    // const task = todos.filter(todo => todo.category == "task");
-    // const mustTask = todos.filter(todo => todo.category == "mustTask");
-
-    // const todos = await getAllTodos();
+const TodoPage = ({todos,categories}: TodoPageProps) => {
 
     const [isOpen, setIsOpen] = useState(false);
     
@@ -67,4 +60,4 @@ const TodoCategory = ({todos,categories}: TodoCategoryProps) => {
   )
 }
 
-export default TodoCategory
+export default TodoPage
