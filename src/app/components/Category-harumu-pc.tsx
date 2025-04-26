@@ -65,9 +65,9 @@ const Category = ({todos,category}: CategoryProps) => {
                                 <button className='ml-1 mt-3 mb-1 border-b-1 border-gray-300 hover:text-black hover:border-black hover:font-normal' onClick={handleEdit}>保存する</button>
                             </div>
                         ):(
-                        <div className='mx-2 flex flex-col text-gray-950 text-xs font-light '>
+                        <div className='mx-2 flex flex-col text-gray-800 text-xs font-light '>
                             <button className='mb-1 border-b-1 border-gray-300 hover:text-black hover:border-black hover:font-normal ' onClick={handelEditing}>名前の変更</button>
-                            <button className='border-b-1 border-gray-300 hover:text-red-500 hover:border-red-300 hover:font-bold' onClick={handleDelete}>削除</button>
+                            <button className='border-b-1 border-gray-300 hover:text-red-500 hover:border-red-300 hover:font-normal' onClick={handleDelete}>削除</button>
                         </div>
                         )}
 

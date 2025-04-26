@@ -64,11 +64,6 @@
       "id": "206e702f-60a6-4963-9033-3526bc82ffe5",
       "text": "1",
       "category": "task2"
-    },
-    {
-      "id": "2d23942e-63ae-4bee-96fb-e4f2aa5d2178",
-      "text": "task00",
-      "category": "new4"
     }
   ],
   "category": [
@@ -85,16 +80,8 @@
       "text": "new"
     },
     {
-      "id": "483e3f78-7cbe-427e-af39-dde7d4e7355b",
-      "text": "new2"
-    },
-    {
-      "id": "51cdec3b-b2f7-4b4d-8673-33fdfe56f5ab",
-      "text": "new3"
-    },
-    {
-      "id": "89d1d40f-e199-4c40-8b26-3f37785c3522",
-      "text": "new4"
+      "id": "ca05bc59-c3bc-4b7d-ba4b-f43e6088adf4",
+      "text": "task1"
     }
   ]
 }

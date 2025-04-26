@@ -2,6 +2,7 @@
 
 import { deleteTodo, editTodoText } from '@/api';
 import { Todos } from '@/types'
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { ChangeEvent, useEffect, useRef, useState } from 'react'
 
@@ -68,6 +69,9 @@ export const Todo = ( {todo}: TodoProps) => {
         </button>
       )}
 
+      <button>
+        <Link href={"/detail"}>detailへ</Link>
+      </button>
       <button className='text-red-400 hover:text-red-200' onClick={handleDelete}>delete</button>
     </div>
   </li>

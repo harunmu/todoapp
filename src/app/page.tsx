@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-200">
-      <h1 className="text-3xl mb-10 font-bold text-blue-400">Nextjs 13 Todo App</h1>
+      <h1 className="text-3xl my-10 font-bold text-blue-400 hover:text-yellow-400">Nextjs 13 Todo App</h1>
       <TodoPage todos={todos} categories={categories}/>
       {/* <div className="flex">
         <TodoCategory />

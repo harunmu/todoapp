@@ -31,19 +31,19 @@ const TodoPage = ({todos,categories}: TodoPageProps) => {
 
     <div>
         {isOpen?(
-            <div className='flex relative'>
-                <div className='text-white bg-gray-600 text-xl flex items-center rounded hover:scale-95 duration-200'>
-                    <button onClick={handleClose}>＞</button>
+                <div className='flex relative justify-center max-w-fit'>
+                    <div className='ml-50 text-white bg-gray-600 text-xl flex items-center rounded hover:scale-95 duration-200' onClick={handleClose}>
+                        <button>＞</button>
+                    </div>
+                    <ul className='flex flex-wrap'>
+                        {categories.map((category) => (
+                            <Category key={category.id} todos={todos} category={category}/>
+                        ))}
+                        <li className='self-end'>
+                            <AddCategory />
+                        </li>
+                    </ul>
                 </div>
-                <ul className='flex'>
-                    {categories.map((category) => (
-                        <Category key={category.id} todos={todos} category={category}/>
-                    ))}
-                </ul>
-                <div className='self-end'>
-                    <AddCategory />
-                </div>
-            </div>
         ):(
             <div className="flex items-center bg-white p-10 rounded-lg">
                 <div className='mx-3 font-bold text-gray-600'>
