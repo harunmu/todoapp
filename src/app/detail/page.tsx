@@ -1,6 +1,6 @@
 import { getAllCategory, getAllTodos } from '@/api'
 import React from 'react'
-import CategoryTable from '../components/CategoryTable';
+import CategoryTable from '../components/blog/CategoryTable';
 
 export default async function pageDetail(){
 
@@ -10,7 +10,7 @@ export default async function pageDetail(){
 
   return (
 
-    <ul className='pt-20 bg-gray-200 w-100 h-dvh'>
+    <ul className='pt-20 bg-gray-200 w-70 h-dvh'>
         {categories.map((category) =>(
           <CategoryTable key={category.id}todos={todos} category={category}/>
         ))}

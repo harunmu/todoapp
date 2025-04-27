@@ -5,6 +5,7 @@ import { Todos } from '@/types'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { ChangeEvent, useEffect, useRef, useState } from 'react'
+import Category from './Category';
 
 interface TodoProps {
     todo: Todos;
@@ -70,7 +71,16 @@ export const Todo = ( {todo}: TodoProps) => {
       )}
 
       <button>
-        <Link href={"/detail"}>detailへ</Link>
+        <Link 
+          href={{
+            pathname: `/detail/${todo.id}`,
+            query: {
+              text: todo.text,
+              category: todo.category
+            }
+          }}>
+          detailへ
+        </Link>
       </button>
       <button className='text-red-400 hover:text-red-200' onClick={handleDelete}>delete</button>
     </div>

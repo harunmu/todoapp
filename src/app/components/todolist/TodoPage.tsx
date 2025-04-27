@@ -32,7 +32,7 @@ const TodoPage = ({todos,categories}: TodoPageProps) => {
     <div>
         {isOpen?(
                 <div className='flex relative justify-center max-w-fit'>
-                    <div className='ml-50 text-white bg-gray-600 text-xl flex items-center rounded hover:scale-95 duration-200' onClick={handleClose}>
+                    <div className='ml-20 text-white bg-gray-600 text-xl flex items-center rounded hover:scale-95 duration-200' onClick={handleClose}>
                         <button>＞</button>
                     </div>
                     <ul className='flex flex-wrap'>

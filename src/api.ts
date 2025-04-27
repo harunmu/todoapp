@@ -1,4 +1,4 @@
-import { Categories, Todos } from "./types"
+import { blogContents, Categories, Todos } from "./types"
 
 
 export const getAllTodos = async (): Promise<Todos[]> => {
@@ -17,6 +17,16 @@ export const getAllCategory = async (): Promise<Categories[]> => {
     const categories = res.json();
 
     return categories;
+}
+
+export const getBlogContent = async (id:string) : Promise<blogContents> => {
+    const res = await fetch(`http://localhost:3001/blogContents/${id}`,{
+        cache: "no-store",
+    });
+
+    const contents = await res.json();
+
+    return contents
 }
 
 export const addTaskTodo = async (todo: Todos): Promise<Todos> => {

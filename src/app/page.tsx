@@ -2,7 +2,7 @@
 // import AddTask from "./components/AddTask";
 // import TodoList from "./components/TodoList";
 import { getAllCategory, getAllTodos } from "@/api";
-import TodoPage from "./components/TodoPage";
+import TodoPage from "./components/todolist/TodoPage";
 
 export default async function Home() {
   const todos = await getAllTodos();

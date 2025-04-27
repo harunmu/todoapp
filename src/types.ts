@@ -9,3 +9,11 @@ export interface Categories{
     text: string;
 }
 
+export interface blogContents{
+    id: string;
+    date: string;
+    title: string;
+    text: string;
+    tag: string;
+}
+
